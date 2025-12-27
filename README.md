@@ -1,7 +1,8 @@
 # DockerInstance_Terraformed
-Terraform modules for deploying an EC2 instance and installing Docker
+Terraform modules for deploying a Docker Instance in AWS
 
-Uses Terraform to deploy an AWS EC2 instance and install Docker, then outputs a link to SSH into the instance
+Uses Terraform to deploy an AWS EC2 instance and install Docker, then outputs a link to SSH into the instance.
+Run the link from the same place you run the Terraform plan, and you'll be in a fresh Docker environment to use at your leisure!
 
 Module includes:
 - EC2 instance using Ubuntu 22.04
@@ -25,3 +26,4 @@ Notes
 - Deafult region is us-west-2
 - Security Group allows SSH access from your IP; it does not allow any other ingress
 - Output includes a link to SSH into the machine from the same place you run the TF module
+- The script takes about 30 seconds to install Docker and is usually done by the time you SSH in
